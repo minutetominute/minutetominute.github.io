@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <title>Jose Garza | Web Developer</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.2.1/trianglify.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  </head>
+  <body>
+    <div class="hero">
+      <figure class="hero">
+        <div class="hero-image">
+        </div>
+        <div class="header">
+          <h1 class="hero-header">Jose Garza</h1>
+          <h2 class="hero-subheader">
+            Web Developer
+          </h2>
+        </div>
+      </figure>
+    </div>
+
+    <script>
+      var defaults = {
+        cell_size: 50,
+        variance: 0.4,
+        x_colors: 'RdBu',
+        y_colors: 'match_x',
+        palette: Trianglify.colorbrewer,
+        color_space: 'lab',
+        color_function: false,
+        stroke_width: 1.51,
+        width: window.innerWidth,
+        height: window.innerHeight,
+        seed: "20"
+      };
+      var pattern = Trianglify(defaults);
+      var points = {};
+      var timer = 0;
+
+      pattern.polys.forEach(function (poly) {
+        for(var i = 0; i < poly[1].length; i++) {
+          if (!points[poly[1][i]]) {
+            points[poly[1][i]] = {
+              x_counter: Math.random()*2*Math.PI,
+              y_counter: Math.random()*2*Math.PI,
+              step_size: Math.random()*100+25,
+              circle_size: 1+.8*Math.random(),
+              points_array: []
+            };
+          }
+          points[poly[1][i]]["points_array"].push(poly[1][i]);
+        }
+      });
+
+      window.setInterval(function () {
+        Object.keys(points).forEach(function(point) {
+          var points_array = points[point]["points_array"];
+          var step_size = points[point]["step_size"];
+          var circle_size = points[point]["circle_size"];
+          var x_delta = Math.sin(points[point]["x_counter"])*(Math.PI/step_size)*circle_size;
+          var y_delta = Math.sin(points[point]["y_counter"])*(Math.PI/step_size)*circle_size;
+          for (var j = 0; j < points_array.length; j++) {
+            points_array[j][0] += x_delta;
+            points_array[j][1] += y_delta;
+          }
+          points[point]["x_counter"] += Math.PI/step_size;
+          points[point]["y_counter"] += Math.PI/step_size;
+        })
+        $(".hero-image").html(pattern.canvas());
+        timer++;
+      }, 20);
+
+    </script>
+  </body>
+</html>
