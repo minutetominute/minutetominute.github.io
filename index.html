@@ -3,8 +3,11 @@
     <title>Jose Garza | Web Developer</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.2.1/trianglify.min.js"></script>
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="./lib/script.js"></script>
   </head>
   <body>
     <div class="hero">
@@ -13,64 +16,202 @@
         </div>
         <div class="header">
           <h1 class="hero-header">Jose Garza</h1>
+          <figure class="portrait"></figure>
           <h2 class="hero-subheader">
-            Web Developer
+            Web Developer - NYC
           </h2>
+          <div class="content">
+            <ul class="tabs group">
+              <li class="tab">
+                <a id="about-me" href="#">
+                  About Me
+                </a>
+              </li>
+              <li class="tab">
+                <a class="selected" id="projects" href="#">
+                  Projects
+                </a>
+              </li>
+              <li class="tab">
+                <a id="contact" href="#">
+                  Contact
+                </a>
+              </li>
+            </ul>
+            <ul class="content-tabs">
+              <li class="tab-content down-view" id="about-me">
+                <p>
+                  Hello! I am web developer currently located in New York City!
+                  I have experience in Ruby, Rails, Javascript, Backbone, and am
+                  currently learning Scheme.  I previously studied chemical engineering
+                  and worked as a field engineer, but after learning the power of software,
+                  I've moved passions to the web.  Contact me if you need someone who loves
+                  to learn and create new technologies!
+                  <br>
+                  <br>
+                  <a href="#">View Resume</a>
+                </p>
+              </li>
+              <li class="tab-content in-view" id="projects">
+                <a class="left-arrow" href="#">
+                  <i class="fa fa-angle-left"></i>
+                </a>
+                <ul class="project-view-container">
+                  <li class="project-view left" id="mysuperheropal" data-id="0">
+                    <a class="project-link" href="http://www.mysuperheropal.co">
+                      <figure class="project">
+                        <div class="description">
+                          <h1 class="hidden-header">mysuperheropal</h1>
+                          <span class="copy">Myfitnesspal clone for super powers!</span>
+                          <span class="built-with">Built with:</span>
+                          <ul class="software group">
+                            <li class="software-item">
+                              <img src="./img/ruby.png" alt="" />
+                              <p>
+                                Ruby
+                              </p>
+                            </li>
+                            <li class="software-item">
+                              <img src="./img/rails.png" alt="" />
+                              <p>
+                                Rails
+                              </p>
+                            </li>
+                            <li class="software-item">
+                              <img src="./img/postgresql.png" alt="" />
+                              <p style="margin-left: -5px">
+                                Postgresql
+                              </p>
+                            </li>
+                            <li class="software-item">
+                              <img src="./img/backbone.jpg" alt="" />
+                              <p style="margin-left: -4px">
+                                Backbone
+                              </p>
+                            </li>
+                          </ul>
+                        </div>
+                        <h1>mysuperheropal</h1>
+                      </figure>
+                    </a>
+                    <a class="github-link" href="https://github.com/minutetominute/mysuperheropal">
+                      <i class="fa fa-github-square"></i>
+                    </a>
+                  </li>
+                  <li class="project-view visible" id="mysuperheropal" data-id="1">
+                    <a class="project-link" href="http://www.mysuperheropal.co">
+                      <figure class="project">
+                        <div class="description">
+                          <h1 class="hidden-header">mysuperheropal</h1>
+                          <span class="copy">Myfitnesspal clone for super powers!</span>
+                          <span class="built-with">Built with:</span>
+                          <ul class="software group">
+                            <li class="software-item">
+                              <img src="./img/ruby.png" alt="" />
+                              <p>
+                                Ruby
+                              </p>
+                            </li>
+                            <li class="software-item">
+                              <img src="./img/rails.png" alt="" />
+                              <p>
+                                Rails
+                              </p>
+                            </li>
+                            <li class="software-item">
+                              <img src="./img/postgresql.png" alt="" />
+                              <p style="margin-left: -5px">
+                                Postgresql
+                              </p>
+                            </li>
+                            <li class="software-item">
+                              <img src="./img/backbone.jpg" alt="" />
+                              <p style="margin-left: -4px">
+                                Backbone
+                              </p>
+                            </li>
+                          </ul>
+                        </div>
+                        <h1>mysuperheropal</h1>
+                      </figure>
+                    </a>
+                    <a class="github-link" href="https://github.com/minutetominute/mysuperheropal">
+                      <i class="fa fa-github-square"></i>
+                    </a>
+                  </li>
+                  <li class="project-view right" id="mysuperheropal" data-id="2">
+                    <a class="project-link" href="http://www.mysuperheropal.co">
+                      <figure class="project">
+                        <div class="description">
+                          <h1 class="hidden-header">mysuperheropal</h1>
+                          <span class="copy">Myfitnesspal clone for super powers!</span>
+                          <span class="built-with">Built with:</span>
+                          <ul class="software group">
+                            <li class="software-item">
+                              <img src="./img/ruby.png" alt="" />
+                              <p>
+                                Ruby
+                              </p>
+                            </li>
+                            <li class="software-item">
+                              <img src="./img/rails.png" alt="" />
+                              <p>
+                                Rails
+                              </p>
+                            </li>
+                            <li class="software-item">
+                              <img src="./img/postgresql.png" alt="" />
+                              <p style="margin-left: -5px">
+                                Postgresql
+                              </p>
+                            </li>
+                            <li class="software-item">
+                              <img src="./img/backbone.jpg" alt="" />
+                              <p style="margin-left: -4px">
+                                Backbone
+                              </p>
+                            </li>
+                          </ul>
+                        </div>
+                        <h1>mysuperheropal</h1>
+                      </figure>
+                    </a>
+                    <a class="github-link" href="https://github.com/minutetominute/mysuperheropal">
+                      <i class="fa fa-github-square"></i>
+                    </a>
+                  </li>
+                </ul>
+                <a class="right-arrow" href="#">
+                  <i class="fa fa-angle-right"></i>
+                </a>
+              </li>
+              <li class="tab-content group up-view" id="contact">
+                <section class="my-sites">
+                  <div class="links group">
+                    <a href="https://github.com/minutetominute"><i class="fa fa-github-square"></i></a>
+                    <a href="https://www.linkedin.com/in/garzajm"><i class="fa fa-linkedin-square"></i></a>
+                  </div>
+                </section>
+                <section class="contact-me">
+                  <form action="http://formspree.io/jose.garza.m@gmail.com"
+                        method="POST">
+                    <input type="email" name="_replyto" placeholder="Your email">
+                    <input type="text" name="name" placeholder="Your message here">
+                    <input type="submit" value="Send">
+                  </form>
+                </section>
+              </li>
+            </ul>
+          </div>
         </div>
       </figure>
     </div>
 
     <script>
-      var defaults = {
-        cell_size: 50,
-        variance: 0.4,
-        x_colors: 'RdBu',
-        y_colors: 'match_x',
-        palette: Trianglify.colorbrewer,
-        color_space: 'lab',
-        color_function: false,
-        stroke_width: 1.51,
-        width: window.innerWidth,
-        height: window.innerHeight,
-        seed: "20"
-      };
-      var pattern = Trianglify(defaults);
-      var points = {};
-      var timer = 0;
-
-      pattern.polys.forEach(function (poly) {
-        for(var i = 0; i < poly[1].length; i++) {
-          if (!points[poly[1][i]]) {
-            points[poly[1][i]] = {
-              x_counter: Math.random()*2*Math.PI,
-              y_counter: Math.random()*2*Math.PI,
-              step_size: Math.random()*100+25,
-              circle_size: 1+.8*Math.random(),
-              points_array: []
-            };
-          }
-          points[poly[1][i]]["points_array"].push(poly[1][i]);
-        }
+      $(document).ready(function () {
+        Triangles.create();
+        Content.listen();
       });
-
-      window.setInterval(function () {
-        Object.keys(points).forEach(function(point) {
-          var points_array = points[point]["points_array"];
-          var step_size = points[point]["step_size"];
-          var circle_size = points[point]["circle_size"];
-          var x_delta = Math.sin(points[point]["x_counter"])*(Math.PI/step_size)*circle_size;
-          var y_delta = Math.sin(points[point]["y_counter"])*(Math.PI/step_size)*circle_size;
-          for (var j = 0; j < points_array.length; j++) {
-            points_array[j][0] += x_delta;
-            points_array[j][1] += y_delta;
-          }
-          points[point]["x_counter"] += Math.PI/step_size;
-          points[point]["y_counter"] += Math.PI/step_size;
-        })
-        $(".hero-image").html(pattern.canvas());
-        timer++;
-      }, 20);
-
     </script>
   </body>
 </html>
