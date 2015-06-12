@@ -23,10 +23,10 @@ body {
 
 .header {
   position: absolute;
-  top: 50%;
+  top: 40px;
   left: 50%;
   width: 100%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%);
   color: white;
 }
 
