@@ -49,7 +49,7 @@
                   to learn and create new technologies!
                   <br>
                   <br>
-                  <a href="#">View Resume</a>
+                  <a href="https://docs.google.com/document/d/1QYR6vdduqfLoFfKdr7b2sOEG3ZS-gTPHXWAVwBn0eFg/edit?usp=sharing">View Resume</a>
                 </p>
               </li>
               <li class="tab-content in-view" id="projects">
@@ -113,8 +113,8 @@
                 <section class="contact-me">
                   <form action="http://formspree.io/jose.garza.m@gmail.com"
                         method="POST">
-                    <input type="email" name="_replyto" placeholder="Your email">
-                    <input type="text" name="name" placeholder="Your message here">
+                    <input type="email" class="email" name="_replyto" placeholder="Your email">
+                    <textarea class="body" name="message" placeholder="Your message here"></textarea>
                     <input type="submit" value="Send">
                   </form>
                 </section>
@@ -129,6 +129,7 @@
       $(document).ready(function () {
         Triangles.create();
         Content.listen();
+        $(window).resize(Triangles.create)
       });
     </script>
   </body>

@@ -424,6 +424,15 @@ canvas {
   left: 102%;
 }
 
+.email {
+  width: 100%;
+}
+
+.body {
+  width: 100%;
+  height: 80%;
+}
+
 /*.visible {
   position: absolute;
   left: 0;
