@@ -327,6 +327,9 @@ canvas {
   background-image: url("../img/object-dispatcher.png");
 }
 
+.project-view#game-of-life .project {
+  background-image: url("../img/game-of-life.png");
+}
 
 .project-link, .project-link a:visited, .project-link a:hover {
   color: black;
