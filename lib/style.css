@@ -77,7 +77,7 @@ canvas {
                0 5px 10px rgba(0,0,0,.25),
                0 10px 10px rgba(0,0,0,.2),
                0 20px 20px rgba(0,0,0,.15);
-  background-image: url("./img/josegarza.jpg")
+  background-image: url("../img/josegarza.jpg")
 }
 
 .content {
@@ -210,7 +210,7 @@ canvas {
 }
 
 .links i {
-  color: white;
+  color: #bbbbbb;
   float: left;
   height: 80px;
   width: 80px;
@@ -295,10 +295,15 @@ canvas {
   height: 80%;
   padding: 20px;
   position: relative;
+  overflow: hidden;
 }
 
 .project-view {
-  position: relative;
+  transform: translate3d(0, 0, 0);
+  position: absolute;
+  width: 495.891px;
+  height: 304px;
+  transition: left 500ms;
 }
 
 .project {
@@ -306,7 +311,7 @@ canvas {
   width: 100%;
   position: relative;
   overflow: hidden;
-  background-image: url("./img/mysuperheropal.png");
+  background-image: url("../img/mysuperheropal.png");
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -395,10 +400,10 @@ canvas {
   margin: 10px;
 }
 
-.project-view-container:after, .project-view-container:before {
+.tab-content#projects:after, .tab-content#projects:before {
   position: absolute;
   content: "";
-  top: 10%;
+  top: 7%;
   height: 80%;
   width: 1px;
   border-radius: 5px;
@@ -411,12 +416,12 @@ canvas {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80737373', endColorstr='#80737373',GradientType=0 ); /* IE6-9 */
 }
 
-.project-view-container:before {
-  left: -2%;
+.tab-content#projects:before {
+  left: 20%;
 }
 
-.project-view-container:after {
-  left: 102%;
+.tab-content#projects:after {
+  left: 80%;
 }
 
 .email {
@@ -451,17 +456,36 @@ canvas {
   transform: scale(1.1);
 }
 
-/*.visible {
+.visible {
   position: absolute;
-  left: 0;
+  left: 20px;
 }
 
 .left {
   position: absolute;
-  left: 10px;
+  left: -495.891px;
 }
 
 .right {
   position: absolute;
-  left: 110px;
-}*/
+  left: 535.891px;
+}
+
+.project-view-locations {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.circle {
+  float: left;
+  height: 3px;
+  width: 3px;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.filled {
+  background: black;
+}

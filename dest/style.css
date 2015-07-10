@@ -216,7 +216,7 @@ canvas {
 }
 
 .links i {
-  color: white;
+  color: #bbbbbb;
   float: left;
   height: 80px;
   width: 80px;
@@ -305,10 +305,16 @@ canvas {
   height: 80%;
   padding: 20px;
   position: relative;
+  overflow: hidden;
 }
 
 .project-view {
-  position: relative;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  position: absolute;
+  width: 495.891px;
+  height: 304px;
+  transition: left 500ms;
 }
 
 .project {
@@ -408,10 +414,10 @@ canvas {
   margin: 10px;
 }
 
-.project-view-container:after, .project-view-container:before {
+.tab-content#projects:after, .tab-content#projects:before {
   position: absolute;
   content: "";
-  top: 10%;
+  top: 7%;
   height: 80%;
   width: 1px;
   border-radius: 5px; /* FF3.6+ */ /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
@@ -419,12 +425,12 @@ canvas {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80737373', endColorstr='#80737373',GradientType=0 ); /* IE6-9 */
 }
 
-.project-view-container:before {
-  left: -2%;
+.tab-content#projects:before {
+  left: 20%;
 }
 
-.project-view-container:after {
-  left: 102%;
+.tab-content#projects:after {
+  left: 80%;
 }
 
 .email {
@@ -460,19 +466,39 @@ canvas {
           transform: scale(1.1);
 }
 
-/*.visible {
+.visible {
   position: absolute;
-  left: 0;
+  left: 20px;
 }
 
 .left {
   position: absolute;
-  left: 10px;
+  left: -495.891px;
 }
 
 .right {
   position: absolute;
-  left: 110px;
-}*/
+  left: 535.891px;
+}
+
+.project-view-locations {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.circle {
+  float: left;
+  height: 3px;
+  width: 3px;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.filled {
+  background: black;
+}
 
 /*# sourceMappingURL=style.css.map */
